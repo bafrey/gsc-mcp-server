@@ -109,8 +109,8 @@ gsc_server.mcp._tool_manager._tools.pop("reauthenticate", None)
 
 def _probe_google() -> None:
     try:
-        _google_credentials()
-        log.info("Google credentials OK (token refresh succeeded)")
+        sites = get_gsc_service().sites().list().execute().get("siteEntry", [])
+        log.info("Google credentials OK: %d Search Console properties visible", len(sites))
     except Exception as e:  # noqa: BLE001 - startup diagnostic only
         log.error("Google credentials FAILED: %s", e)
 

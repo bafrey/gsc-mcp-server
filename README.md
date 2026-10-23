@@ -22,7 +22,7 @@ Google Search Console MCP server behind the Claude connector at
 | `GSC_ALLOW_DESTRUCTIVE` | `true` to enable add/delete site + delete sitemap tools (off by default). |
 | `PUBLIC_BASE_URL` | Optional; defaults to `https://$RAILWAY_PUBLIC_DOMAIN`. |
 
-On boot the log says `Google credentials OK` or `Google credentials FAILED: <reason>`
+On boot the log says `Google credentials OK: N Search Console properties visible` or `Google credentials FAILED: <reason>`
 (`invalid_grant` = the refresh token was revoked; mint a new one).
 
 ---
